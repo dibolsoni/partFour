@@ -16,7 +16,7 @@
     let newarray = [];
     const total = arrPhrase.length;
     for (let i = 0; i < total; i++) {
-        newarray.push(new Phrase(arrPhrase[i].quote));
+        newarray.push(new Phrase(arrPhrase[i].quote, arrPhrase[i].hint));
     }
     return newarray;
     } 
@@ -150,5 +150,14 @@
         result = imgs
                     .filter(item =>  !item.children[0].src.includes(livehearts))
                     .map(item => item.children[0].src = item.children[0].src.replace(losthearts,livehearts));
+
+                        
+        // btn hint reset
+        const btn_hint = document.querySelector('#scoreboard p');
+        btn_hint.textContent = 'Click here to receive a hint (loses one try)';
+        btn_hint.className = '';
+        
+
+ 
     }
 }

@@ -35,6 +35,20 @@ keyboard_letters.addEventListener('keypress',function(e) {
         }
 });
 
+const btn_hint = document.querySelector('#scoreboard p');
+const hinted = function(e) {
+    e.preventDefault();
+    if (btn_hint.className || game.missed >= 4) {
+        return true;
+    }
+    btn_hint.className = 'chosen';
+    btn_hint.textContent = 'Hint: '+ game.activePhrase.hint;
+    game.removeLife();
+    btn_hint.disabled = true;
+};
+btn_hint.className = '';
+btn_hint.textContent = 'Click here to receive a hint (loses one try)';
+btn_hint.addEventListener('click', hinted);
 
 
 

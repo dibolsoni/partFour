@@ -28,6 +28,8 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 li, ol, ul {
@@ -39,7 +41,6 @@ h2 {
   margin: 0;
   text-transform: uppercase;
   font-size: var(--font-size-large);
-  margin: 0;
 }
 
 h1 {
@@ -84,7 +85,6 @@ button {
 }
 
 /* Title */
-
 .header {
   color: #3a3f58;
 }
@@ -161,7 +161,6 @@ button {
 
 
 /* Overlay */
-
 #overlay {
   display: flex;
   flex-direction: column;
@@ -173,6 +172,20 @@ button {
   left: 0;
   right: 0;
   border-radius: 5px;
+}
+
+/* scoreboard */
+#scoreboard {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: inherit;
+  border-radius: 5px;
+  font-size: var(--font-size-medium);
+  color: var(--color-keys);}
+
+/* phrase */
+#phrase li{
+  border-radius: 30%;
 }
 
 .title {
@@ -202,3 +215,5 @@ button {
 .lose a {
   color: var(--color-lose);
 }
+
+
